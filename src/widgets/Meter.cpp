@@ -7,7 +7,7 @@
   Dominic Mazzoni
   Vaughan Johnson
 
-  2004.06.25 refresh rate limited to 30mS, by ChackoN
+  2004.06.25 refresh rate limited to 60mS, by ChackoN
 
 *******************************************************************//**
 
@@ -414,7 +414,7 @@ void MeterPanel::UpdatePrefs()
 
    mMeterRefreshRate =
       std::max(MIN_REFRESH_RATE, std::min(MAX_REFRESH_RATE,
-         gPrefs->Read(Key(wxT("RefreshRate")), 30)));
+         gPrefs->Read(Key(wxT("RefreshRate")), 60)));
    mGradient = gPrefs->Read(Key(wxT("Bars")), wxT("Gradient")) == wxT("Gradient");
    mDB = gPrefs->Read(Key(wxT("Type")), wxT("dB")) == wxT("dB");
    mMeterDisabled = gPrefs->Read(Key(wxT("Disabled")), (long)0);
